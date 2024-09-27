@@ -9,13 +9,27 @@
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <style>
+        #container {
+            padding: 50px;
+            background-color: #EEE;
+        }
+        #container h1 {
+            font-size: 40px;
+            font-family: sans-serif;
+            color: #0080A8;
+        }
+    </style>
 </head>
 <body>
     <div id="container"></div>
     <script type="text/babel">
+        //Method 2 of changing destination
+        var destination = document.querySelector("#container");
         ReactDOM.render(
             <h1>Brigit Chelangat</h1>,
-            document.querySelector("#container")
+            destination
         )
 
     </script>
