@@ -25,12 +25,36 @@
 <body>
     <div id="container"></div>
     <script type="text/babel">
+        /*
         //Method 2 of changing destination
         var destination = document.querySelector("#container");
         ReactDOM.render(
             <h1>Brigit Chelangat</h1>,
             destination
         )
+        */
+
+        //React Class components -Extending React.Component
+        //React.createClass is deprecated
+        var destination = document.querySelector("#container");
+        class Greeting extends React.Component{
+            render() {
+                return (
+                    <h1>Hello</h1>
+                );
+            }
+        };
+
+        ReactDOM.render(
+            <div>
+                <Greeting/>
+                <Greeting/>
+                <Greeting/>
+                <Greeting/>
+            </div>,
+            document.querySelector("#container")
+        );
+
 
     </script>
 </body>
