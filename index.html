@@ -40,17 +40,17 @@
         class Greeting extends React.Component{
             render() {
                 return (
-                    <h1>Hello</h1>
+                    <h1>Hello {this.props.greeted}</h1>
                 );
             }
         };
 
         ReactDOM.render(
             <div>
-                <Greeting/>
-                <Greeting/>
-                <Greeting/>
-                <Greeting/>
+                <Greeting greeted = "Brigit"/>
+                <Greeting greeted = "Evans"/>
+                <Greeting greeted = "Brian"/>
+                <Greeting greeted = "Ngeno"/>
             </div>,
             document.querySelector("#container")
         );
