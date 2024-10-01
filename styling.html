@@ -15,8 +15,8 @@
             padding: 50px;
             background-color: #EEE;
         }
-
-        div div div {
+        /*
+        .letter {
             padding: 10px;
             margin: 10px;
             background-color: aquamarine;
@@ -26,6 +26,8 @@
             font-size: 32px;
             text-align: center;
         }
+        */
+        
     
     </style>
 </head>
@@ -35,8 +37,20 @@
        var destination = document.querySelector("#container");
        class Letter extends React.Component{
              render() {
+
+                //Styling components the React way - Using a style object
+                var letterStyle = {
+                    padding: 10,
+                    margin: 10,
+                    backgroundColor: "aquamarine",
+                    color: "#333",
+                    display: "inline-block",
+                    fontFamily: "monospace",
+                    fontSize: 32,
+                    textAlign: "center"
+                };
                 return (
-                    <div>
+                    <div style = {letterStyle} >
                         {this.props.children}
                     </div>
                 );
